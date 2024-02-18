@@ -4,7 +4,7 @@ from rest_framework import status
 
 from customers.models import Customer
 
-from .serializers import CustomerSerializer, 
+from .serializers import CustomerSerializer
 
 
 
