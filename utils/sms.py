@@ -1,4 +1,3 @@
-# utils.py
 import africastalking
 
 # Initialize Africa's Talking SMS
