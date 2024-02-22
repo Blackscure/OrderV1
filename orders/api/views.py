@@ -5,11 +5,11 @@ from rest_framework import status
 from orders.models import Order
 from utils.sms import send_sms
 
-from .serializers import CustomerSerializer, OrderSerializer
+from .serializers import  OrderSerializer
 
 
 
-class OrderListCreateView(APIView):
+class OrderView(APIView):
     def get(self, request, format=None):
         orders = Order.objects.all()
         serializer = OrderSerializer(orders, many=True)

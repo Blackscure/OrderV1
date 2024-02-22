@@ -8,7 +8,7 @@ from .serializers import CustomerSerializer
 
 
 
-class CustomerListCreateView(APIView):
+class CustomerView(APIView):
     def get(self, request, format=None):
         customers = Customer.objects.all()
         serializer = CustomerSerializer(customers, many=True)
