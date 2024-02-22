@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'customers.apps.CustomersConfig'
-    'orders.apps.OrdersConfig'
+    'customers.apps.CustomersConfig',
+    'orders.apps.OrdersConfig',
+    'oidc_provider',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'oidc_provider',
+    'oidc_provider.middleware.OIDCUserInfoMiddleware',
 ]
 
 ROOT_URLCONF = 'orderv1.urls'
